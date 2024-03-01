@@ -1,0 +1,262 @@
+body{
+	background-color:tan;
+	padding:0;
+	margin:0;
+	overflow-x: hidden;
+	text-align: center;
+}
+header{
+	background-color: #9c6137;
+	padding:15px;
+	box-shadow: 0 0 3px white;
+	border-radius:25px;
+}
+header:hover{
+	background-color: tan;
+}
+header li{
+	display:inline;
+	padding-left: 45px;
+	font-weight: bold;
+	font-family:sans-serif;
+}
+header li a{
+	color:black;
+	text-decoration: none;
+	padding: 13px;
+	transition: .5s;
+
+}
+header li a:hover
+{
+	color:black;
+	padding: 13px;
+
+}
+header ul #Contact a{
+	color: white;
+	background-color: #deb887;
+	border-radius: 30px;
+	transition:.3s ease;
+}
+header ul #Contact a:hover
+{
+	background-color:black;
+	
+}
+h2{
+	font-weight:normal;
+	font-size:35px;
+	Position:relative;
+	margin:40px 0;
+	background-color:#9c6137;
+	border-radius:35px;
+}
+h2:hover{
+	background-color:tan;
+}
+h2{
+	font-family: fantasy;
+	font-weight:thin;
+	color:black; 
+}
+
+
+
+
+
+
+*{
+margin: 12px;
+padding: 12px;
+box-sizing:border-box;
+font-family:sans-serif;
+
+}
+
+input{
+	display:none;
+}
+ .container{
+	width: 100%;
+	text-align:center;
+}
+h1{
+	font-weight:bolder;
+	font-size:35px;
+	Position:relative;
+	margin:40px 0;
+	background-color:burlywood;
+	border-width: 50%
+	border-radius:35px;
+}
+h1{
+	font-family:Papyrus;
+}
+h1:hover{
+	background-color: tan;
+}
+
+h1::before{
+	content:'';
+	Position:absolute;
+	width:100px; 
+	height:3px;
+	background-color: brown;
+	bottom:-10px;
+	left:50%; 
+	top:80%;
+	transform: translateX(-50%); 
+	animation: animate 4s linear infinite;
+}
+@keyframes animate{
+	0%{
+		width:100px;
+	}
+	50%{
+		width:200px; 
+	}
+	100%{
+		width:100px;
+	}	
+}
+	.Top-content{
+	 background-color:#deb887;
+	 width:90%; 
+	 margin:0 auto 20px auto;
+	 height:60px;
+	 display:flex;
+	 align-items:center;
+	 border-radius:5px;
+	 box-shadow:3px 3px 5px #9b716b; 
+}
+h3{
+	height:60px;  
+	background-color:#ebc798;
+	line-height:60px;
+	padding:0 50px;
+	color:#808080;
+}
+label{
+	display:inline-block; 
+	height:80px;
+	margin:0 20px;
+	line-height: 60px;
+	font-size: 18px;
+	color:#808080;
+	cursor:pointer; 
+	transition: color .5s;
+}
+label:hover{
+	color:white; 
+}
+.photo-gallery{
+	width:90%; 
+	margin:auto;
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+}
+.pic{
+	position:relative;
+	height:230px; 
+	box-shadow:3px 3px 5px tan;
+	cursor:pointer;
+}
+.pic img{
+	width:100%;
+	height:100%;
+	border-radius:20px; 
+	transition:.5s;
+}
+.pic::before{
+	content:"photo-gallery";
+	position:absolute;
+	top:50%;
+	color:white;
+	font-size:25px;
+	font-weight: bold;
+	width: 100%;
+	margin-top: -80px;
+	opacity:0;
+	transition: .3s;
+	transition-delay: .2s; 
+	z-index: 1;
+}
+.pic::after{
+	content:""; 
+	position:absolute;
+	width:100%;
+	bottom: 0;
+	left: 0;
+	border-radius: 10px;
+	height:0%;
+	background-color:"";
+	transition: .3s;
+}
+.pic:hover::after{
+	height: 100%;
+}
+.pic:hover::before{
+	margin-top: 0;
+	opacity: 1;
+}
+#check1:checked ~ .container .photo-gallery .pic{
+	opacity: 1;
+	transform:scale(1);
+	position:relative;
+	transition:.4s;
+}
+#check2:checked ~ .container .photo-gallery .family{
+	transform:scale(1);
+	opacity:1;
+	position:relative; 
+}
+#check2:checked~.container .photo-gallery .child,
+#check2:checked~.container .photo-gallery .place{
+	opacity: 0;
+	transform:scale(0);
+	position:absolute;
+	transition: .3s;
+}
+#check3:checked ~ .container .photo-gallery .child{
+	transform:scale(1);
+	opacity:1;
+	position:relative; 
+}
+#check3:checked~.container .photo-gallery .family,
+#check3:checked~.container .photo-gallery .place{
+	opacity: 0;
+	transform:scale(0);
+	position:absolute;
+	transition: .3s;
+}
+#check4:checked ~ .container .photo-gallery .place{
+	transform:scale(1);
+	opacity:1;
+	position:relative; 
+}
+#check4:checked~.container .photo-gallery .family,
+#check4:checked~.container .photo-gallery .child{
+	opacity: 0;
+	transform:scale(0);
+	position:absolute;
+	transition: .0s;
+}
+footer {
+  position: bottom;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:burlywood ;
+  color: black;
+  text-align: center;
+  border-radius:50px;
+}
+footer{
+	font-weight:bold;
+	font-family:fantasy;
+}
+footer:hover{
+	background-color:tan;
+}
